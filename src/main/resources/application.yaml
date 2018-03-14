@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+  messages: utf-8
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /dream
+
+mybatis:
+  #指定bean所在包
+  type-aliases-package: com.dream.dao
+  #指定映射文件
+  mapper-locations: classpath:mybatis/mapper/*.xml
