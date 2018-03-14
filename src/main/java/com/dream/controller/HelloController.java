@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
 @RestController
@@ -21,14 +22,16 @@ public class HelloController {
         return "hello,this is a springboot demo";
     }
     @RequestMapping("/get")
-    public Object getCount(){
+    public Object getCount(HttpServletRequest request){
 
         Map res = new HashMap();
         res.put("1",null);
         res.put("date",new Date());
         res.put("2",11);
         res.put("3",11.001);
-
+        System.out.println(request.getRequestURI());
+        System.out.println(request.getPathInfo());
+        System.out.println(request.getRequestURL());
         List list = new ArrayList();
         list.add(1);
         list.add(null);
