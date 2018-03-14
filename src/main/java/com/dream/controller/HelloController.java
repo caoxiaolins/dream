@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.*;
+
 @RestController
 public class HelloController {
     private static Logger logger = LoggerFactory.getLogger(HelloController.class);
@@ -20,7 +22,19 @@ public class HelloController {
     }
     @RequestMapping("/get")
     public Object getCount(){
-        int count = testService.getCount();
-        return count;
+
+        Map res = new HashMap();
+        res.put("1",null);
+        res.put("date",new Date());
+        res.put("2",11);
+        res.put("3",11.001);
+
+        List list = new ArrayList();
+        list.add(1);
+        list.add(null);
+        list.add(new Date());
+        list.add("1");
+        res.put("list",list);
+        return res;
     }
 }

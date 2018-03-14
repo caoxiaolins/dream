@@ -18,3 +18,4 @@ mybatis:
   type-aliases-package: com.dream.dao
   #指定映射文件
   mapper-locations: classpath:mybatis/mapper/*.xml
+#  config-location: classpath:mybatis/mybatis.xml
