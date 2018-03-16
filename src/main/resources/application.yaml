@@ -7,6 +7,25 @@ spring:
       enabled: true
       force: true
   messages: utf-8
+  freemarker:
+    allow-request-override: false
+    cache: true
+    check-template-location: true
+    charset: UTF-8
+    content-type: text/html
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+    prefix:
+    suffix: .ftl
+  mail:
+    host: smtp.163.com
+    username: caoxiaolin_s@163.com
+    password: gyj950408
+    properties:
+      mail:
+        smtp:
+          auth: true
 server:
   tomcat:
     uri-encoding: UTF-8
