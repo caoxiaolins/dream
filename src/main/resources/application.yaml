@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active: dev
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+  messages: utf-8
+  freemarker:
+    allow-request-override: false
+    cache: true
+    check-template-location: true
+    charset: UTF-8
+    content-type: text/html
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+    prefix:
+    suffix: .ftl
+  mail:
+    host: smtp.163.com
+    username: caoxiaolin_s@163.com
+    password: gyj950408
+    properties:
+      mail:
+        smtp:
+          auth: true
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    context-path: /dream
+
+mybatis:
+  #指定bean所在包
+  type-aliases-package: com.dream.dao
+  #指定映射文件
+  mapper-locations: classpath:mybatis/mapper/*.xml
+#  config-location: classpath:mybatis/mybatis.xml
