@@ -21,9 +21,10 @@ public class MailTest {
 
     @Test
     public void test(){
-        this.javaMailComponent.sendMail("854019134@qq.com");
-        this.javaMailComponent.sendMail("785673332@qq.com");
-        this.javaMailComponent.sendMail("w335963076@qq.com");
-        this.javaMailComponent.sendMail("347571938@qq.com");
+        this.javaMailComponent.sendMail("1053776872@qq.com");
+//        this.javaMailComponent.sendMail("854019134@qq.com");
+//        this.javaMailComponent.sendMail("785673332@qq.com");
+//        this.javaMailComponent.sendMail("w335963076@qq.com");
+//        this.javaMailComponent.sendMail("347571938@qq.com");
     }
 }
